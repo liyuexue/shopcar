@@ -1,0 +1,45 @@
+<!--页面的排版，头部，页脚-->
+<div class="container">
+    <header>
+        <span class="back"><</span>
+        <span class="name">购物车</span>
+        <span></span>
+    </header>
+    <main class="content">
+        <shopcar-item
+                ng-repeat="item in productItems"
+                item="item"
+                index="{{$index}}"></shopcar-item>
+        <div class="cho">
+            <h1>
+                <span class="all" ng-class="{allon:flag}" ng-click="checkAll()"></span>
+                <span>全选</span>
+            </h1>
+            <h2>
+                <span class="total">合计：<span class="money">￥{{goodsPrice}}</span></span>
+                <span></span><span>(不含计费)</span>
+            </h2>
+            <h3 class="buy">结算({{goodsCount}})</h3>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li>
+                <span class="iconfont icon-home foot"></span>
+                <p>首页</p>
+            </li>
+            <li>
+                <span class="iconfont icon-xinfeng foot"></span>
+                <p>分类</p>
+            </li>
+            <li>
+                <span class="iconfont icon-search1 foot"></span>
+                <p>购物车</p>
+            </li>
+            <li>
+                <span class="iconfont icon-iconwode foot"></span>
+                <p>我的</p>
+            </li>
+        </ul>
+    </footer>
+</div>

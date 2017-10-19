@@ -1,0 +1,29 @@
+<!--数据的显示-->
+<div class="items">
+    <span id="itemChecked"
+          class="chose"
+          ng-class="{on:item.state}"
+          ng-click="itemChecked(index)"></span>
+
+    <div class="pic">
+        <img ng-src="{{item.image}}" alt="">
+    </div>
+    <div class="con">
+        <h1>
+            <span class="bicname">{{item.name}}</span>
+            <span class="del" ng-click="deleteItem(index)">x</span>
+        </h1>
+        <h2>
+            <span class="color">{{item.color}}</span>
+            <span class="num">{{item.size}}</span>
+        </h2>
+        <h3>
+            <span class="price">￥{{item.price}}</span>
+            <p>
+                <span class="reduce" ng-click="itemCount('-')">-</span>
+                <span class="count">{{item.num}}</span>
+                <span class="add" ng-click="itemCount('+')">+</span>
+            </p>
+        </h3>
+    </div>
+</div>
